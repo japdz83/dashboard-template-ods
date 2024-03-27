@@ -1,9 +1,89 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import BannerIntro from '../components/BannerIntro.vue'
+import StatisticsCard from '../components/Cards/StatisticsCard.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+	<BannerIntro />
+	<div class="content px-3 py-4">
+		<div class="container-fluid">
+			<div class="mb-3">
+				<div class="flotar">
+					<div class="row">
+						<div class="col-lg-2 col-md-6 col-12">
+							<StatisticsCard />
+						</div>
+
+						<div class="col-lg-2 col-md-6 col-12">
+							<StatisticsCard />
+						</div>
+
+						<div class="col-lg-2 col-md-6 col-12">
+							<StatisticsCard />
+						</div>
+
+						<div class="col-lg-2 col-md-6 col-12">
+							<StatisticsCard />
+						</div>
+
+						<div class="col-lg-2 col-md-6 col-12">
+							<StatisticsCard />
+						</div>
+
+						<div class="col-lg-2 col-md-6 col-12">
+							<StatisticsCard />
+						</div>
+					</div>
+				</div>
+
+				<h3 class="fw-bold fs-4 my-3">Avg. Agent Earnings</h3>
+				<div class="row">
+					<div class="col-12">
+						<table class="table table-striped">
+							<thead>
+								<tr class="highlight">
+									<th scope="col">#</th>
+									<th scope="col">First</th>
+									<th scope="col">Last</th>
+									<th scope="col">Handle</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
+
+<style scoped>
+.content{
+	position: relative;
+}
+
+.flotar{
+	width: 100%;
+	position: absolute;
+	top: -5rem;
+	padding: 0 4rem 0 0;
+}
+</style>
