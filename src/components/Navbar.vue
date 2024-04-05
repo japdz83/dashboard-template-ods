@@ -4,7 +4,7 @@ import avatar from '../assets/avatar-1.png'
 </script>
 
 <template>
-	<header class="p-3  border-bottom z-1 ">
+	<header class="p-3 border-bottom-1 z-1 shadow  ">
 		<div class="container-fluid ">
 			<div
 				class="d-flex flex-wrap align-items-center justify-content-start content-nav"
@@ -112,7 +112,6 @@ import avatar from '../assets/avatar-1.png'
 	position: relative;
 	align-items: center;
 }
-
 .form-nav .bx{
 	font-size: 1.5rem;
 	color: var(--grey);
@@ -120,6 +119,10 @@ import avatar from '../assets/avatar-1.png'
 }
 .search-nav{
 	border: none;
+	padding: 4px;
+}
+.search-nav:focus{
+	border: 1px solid var(--primary);
 }
 
 .user-access{

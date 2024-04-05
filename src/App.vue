@@ -5,9 +5,9 @@ import Navbar from './components/Navbar.vue'
 </script>
 
 <template>
-	<div class="wrapper">
+	<div class="wrapper ">
 		<SideBar />
-		<div class="container-fluid ">
+		<div class=" w-100 ">
 			<Navbar />
 			<RouterView />
 		</div>

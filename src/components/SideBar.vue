@@ -27,26 +27,82 @@ const ToggleMenu = () => {
 
 		<h3>Home</h3>
 		<div class="menu">
-			<router-link to="/" class="button">
+			<router-link :to="{ name: 'Dashboard' }" class="ancla-link">
 				<i class="bx bxs-dashboard"></i>
 				<span class="text mx-2">Dashboard</span>
 			</router-link>
-			<router-link to="/about" class="button">
+			<router-link :to="{ name: 'About' }" class="ancla-link">
 				<i class="bx bxs-component"></i>
 				<span class="text mx-2">About</span>
 			</router-link>
-			<router-link to="/team" class="button">
-				<i class="bx bx-table"></i>
-				<span class="text mx-2">Tablet</span>
-			</router-link>
-			<router-link to="/login" class="button">
-				<i class="bx bxs-user"></i>
-				<span class="text mx-2">Login</span>
-			</router-link>
-			<router-link to="/contact" class="button">
-				<i class="bx bx-user-plus"></i>
-				<span class="text mx-2">Register</span>
-			</router-link>
+
+			<div class="ancla-link">
+				<button
+					type="button"
+					data-bs-toggle="collapse"
+					href="#collapse-reporte"
+					role="button"
+					aria-expanded="false"
+					aria-controls="collapse-reporte"
+				>
+					<i class="bx bxs-data"></i>
+					<span class="text mx-2">DataTablet</span>
+					<i class="bx bx-chevron-down"></i>
+				</button>
+			</div>
+			<div class="collapse" id="collapse-reporte">
+				<router-link
+					:to="{ name: 'Tablet'}"
+					class="ancla-link link-collapse"
+				>
+					<i class="bx bx-table"></i>
+					<span class="text mx-2">Tablet</span>
+				</router-link>
+				<router-link
+					:to="{ name: 'Reportes'}"
+					class="ancla-link link-collapse"
+				>
+					<i class="bx bxs-report"></i>
+					<span class="text mx-2">Reportes</span>
+				</router-link>
+			</div>
+			<div class="ancla-link">
+				<button
+					type="button"
+					data-bs-toggle="collapse"
+					href="#collapseAuth"
+					role="button"
+					aria-expanded="false"
+					aria-controls="collapseAuth"
+				>
+					<i class="bx bx-user-plus"></i>
+					<span class="text mx-2">Autenticación</span>
+					<i class="bx bx-chevron-down"></i>
+				</button>
+			</div>
+			<div class="collapse" id="collapseAuth">
+				<router-link
+					:to="{ name: 'Login' }"
+					class="ancla-link link-collapse"
+				>
+					<i class="bx bxs-user"></i>
+					<span class="text mx-2">Login</span>
+				</router-link>
+				<router-link
+					:to="{ name: 'Registro'}"
+					class="ancla-link link-collapse"
+				>
+					<i class="bx bx-user-plus"></i>
+					<span class="text mx-2">Register</span>
+				</router-link>
+				<router-link
+					:to="{ name: 'Recuperar_password'}"
+					class="ancla-link link-collapse"
+				>
+					<i class="bx bx-lock-open-alt"></i>
+					<span class="text mx-2">Recuperar Contraseña</span>
+				</router-link>
+			</div>
 		</div>
 	</aside>
 </template>
@@ -60,7 +116,7 @@ aside {
 	flex-direction: column;
 	background-color: var(--white);
 	color: var(--grey);
-	width: calc(2rem + 45px);
+	width: calc(2rem + 40px);
 	overflow: hidden;
 	min-height: 100vh;
 	padding: 1rem;
@@ -70,48 +126,48 @@ aside {
 aside .flex {
 	flex: 1 1 0%;
 }
- aside .logo {
-	 margin-bottom: 1rem;
-	 align-items: center;
+aside .logo {
+	margin-bottom: 1rem;
+	align-items: center;
 }
- aside .logo img {
-	 width: 2rem;
+aside .logo img {
+	width: 2rem;
 }
- aside .logo span {
+aside .logo span {
 	padding: 0rem 2rem;
 	padding-bottom: 2rem;
 	color: var(--primary-alt);
 }
- aside .menu-toggle-wrap {
-	 display: flex;
-	 justify-content: flex-end;
-	 margin-bottom: 1rem;
-	 position: relative;
-	 top: 0;
-	 transition: 0.2s ease-in-out;
+aside .menu-toggle-wrap {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 1rem;
+	position: relative;
+	top: 0;
+	transition: 0.2s ease-in-out;
 }
- aside .menu-toggle-wrap .menu-toggle {
+aside .menu-toggle-wrap .menu-toggle {
 	display: flex;
 	transition: 0.2s ease-in-out;
 	border-radius: 50%;
     border: none;
     background-color: var(--primary);
 	align-items: center;
-	padding: 3px;
+	padding: 2px;
 }
 aside .menu-toggle-wrap .menu-toggle .bx {
 	align-items: center;
 	margin: 0 auto;
 	padding-top: 1.5px;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	color: var(--white);
 	transition: 0.2s ease-out;
 }
 aside .menu-toggle-wrap .menu-toggle:hover .bx {
-	transform: translateX(0.5rem);
+	transform: translateX(0.2rem);
 }
 aside h3,
-aside .button .text,
+aside .ancla-link .text,
 aside .logo .text{
 	opacity: 0;
 	transition: opacity 0.3s ease-in-out;
@@ -127,34 +183,51 @@ aside .menu {
 	margin: 0 -2rem;
 	padding: 0 1.5rem;
 }
-aside .menu .button {
+aside .menu .ancla-link {
+	font-size: 20px;
+	color: var(--grey);
 	display: flex;
 	align-items: center;
 	text-decoration: none;
 	transition: 0.2s ease-in-out;
 	padding: 0.5rem 1rem;
 	border-radius: 5px;
-	margin: 3px 0px;
+	margin: 5px 0px;
 }
-aside .menu .button .bx {
+
+aside .menu .link-collapse{
+	margin-left: 15%;
+}
+aside .menu div button{
+	color: var(--grey);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: none;
+	background: transparent;
+}
+aside .menu div button a{
+	margin-left: 5% !important;
+}
+aside .menu .ancla-linkn .bx {
 	font-size: 2rem;
 	color: var(--grey);
 	transition: 0.2s ease-in-out;
 }
-aside .menu .button .text {
+aside .menu .ancla-link .text {
 	color: var(--grey);
 	transition: 0.2s ease-in-out;
 }
-aside .menu .button:hover {
+aside .menu .ancla-link:hover {
 	background-color: rgba(138, 146, 166, 0.3);
 }
-aside .menu .button:hover .bx, aside .menu .button:hover .text {
+aside .menu .ancla-link:hover .bx, aside .menu .ancla-link:hover .text {
 	color: var(--grey);
 }
-aside .menu .button.router-link-exact-active {
+aside .menu .ancla-link.router-link-exact-active {
 	background-color: var(--primary);
 }
-aside .menu .button.router-link-exact-active .bx, aside .menu .button.router-link-exact-active .text {
+aside .menu .ancla-link.router-link-exact-active .bx, aside .menu .ancla-link.router-link-exact-active .text {
 	color: var(--white);
 }
 aside .footer {
@@ -174,11 +247,11 @@ aside.is-expanded .menu-toggle-wrap {
 aside.is-expanded .menu-toggle-wrap .menu-toggle {
 	transform: rotate(-180deg);
 }
-aside.is-expanded h3, aside.is-expanded .button .text,
+aside.is-expanded h3, aside.is-expanded .ancla-link .text,
 aside.is-expanded .logo .text {
 	opacity: 1;
 }
-aside.is-expanded .button .bx {
+aside.is-expanded .ancla-link .bx {
 	margin-right: 1rem;
 }
 aside.is-expanded .footer {

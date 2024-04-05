@@ -2,7 +2,7 @@
 
 <template>
 	<div>
-		<h1>Hola Mundo</h1>
+		<h1>Hola Mundo- Reportes</h1>
 	</div>
 </template>
 
