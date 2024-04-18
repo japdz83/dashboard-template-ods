@@ -236,6 +236,10 @@ import Linkedin from '../assets/Linkedin.png'
 	color: var(--white);
 	width: 100%;
 	margin: auto;
+	transition: .3s all ease;
+}
+.btn-form-submit:hover{
+	background-color: var(--primaryHover);
 }
 .social-log{
 	position: relative;

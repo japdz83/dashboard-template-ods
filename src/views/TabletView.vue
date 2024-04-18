@@ -1,9 +1,9 @@
 <script setup>
 import Tablet from '../components/DataTable.vue'
 import ModalForm from '../components/ModalForm.vue'
-import Impresora from '../assets/btn-reportes/impresora.png'
-import Excel from '../assets/btn-reportes/excel.png'
-import PDF from '../assets/btn-reportes/pdf.png'
+import Impresora from '../assets/btn-reportes/impresora-1.png'
+import Excel from '../assets/btn-reportes/excel-1.png'
+import PDF from '../assets/btn-reportes/pdf-1.png'
 </script>
 
 <template>
@@ -48,6 +48,17 @@ import PDF from '../assets/btn-reportes/pdf.png'
 </template>
 
 <style scoped>
+.buton_reporte{
+	width: 60px;
+	height: 60px;
+	padding: 1px;
+	border: 2px solid #3a57e8 !important;
+	border-radius: 50%;
+	transition: .3s all ease;
+}
+.buton_reporte:hover{
+	background-color: #e6e6e6 !important;
+}
 .box_reporte button{
     border: none;
     background-color: transparent;

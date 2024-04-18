@@ -546,20 +546,33 @@ import InputSearch from './InputSearch.vue'
 	color: var(--white);
 	font-size: 20px;
 	border-radius: 4px;
+	transition: .3s all ease;
+}
+
+.btn-tablet-ver:hover{
+	background-color: var(--primaryHover);
 }
 .btn-tablet-edit{
 	background-color: #08B1BA;
 	color: var(--white);
 	font-size: 20px;
 	border-radius: 4px;
-
+	transition: .3s all ease;
+}
+.btn-tablet-edit:hover{
+	background-color: var(--buttonColorHover);
 }
 .btn-tablet-delete{
-	background-color: #EE3333;
+	background-color: var(--btnDanger);
 	color: var(--white);
 	font-size: 20px;
 	border-radius: 4px;
+	transition: .3s all ease;
 }
+.btn-tablet-delete:hover{
+	background-color: var(--btnDangerHover);
+}
+
 .form-check{
 	display: flex;
 	gap: 5px

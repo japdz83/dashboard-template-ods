@@ -121,7 +121,7 @@ aside {
 	min-height: 100vh;
 	padding: 1rem;
 	box-shadow: 12px 0px 15px -5px rgba(0,0,0,0.1);
-	transition: 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 aside .flex {
 	flex: 1 1 0%;
@@ -139,16 +139,22 @@ aside .logo span {
 	color: var(--primary-alt);
 }
 aside .menu-toggle-wrap {
+	position: relative;
 	display: flex;
 	justify-content: flex-end;
 	margin-bottom: 1rem;
 	position: relative;
-	top: 0;
-	transition: 0.2s ease-in-out;
+	top: -3rem;
+	transition: all 0.2s ease-in-out;
 }
 aside .menu-toggle-wrap .menu-toggle {
+	position: absolute;
 	display: flex;
-	transition: 0.2s ease-in-out;
+	right: -16px;
+	top: -5rem;
+	z-index: 10;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
 	border-radius: 50%;
     border: none;
     background-color: var(--primary);
@@ -156,21 +162,23 @@ aside .menu-toggle-wrap .menu-toggle {
 	padding: 2px;
 }
 aside .menu-toggle-wrap .menu-toggle .bx {
+	display: flex;
+	transform: rotate(0);
 	align-items: center;
 	margin: 0 auto;
 	padding-top: 1.5px;
 	font-size: 1.5rem;
 	color: var(--white);
-	transition: 0.2s ease-out;
+	transition: all 0.2s ease-out;
 }
-aside .menu-toggle-wrap .menu-toggle:hover .bx {
-	transform: translateX(0.2rem);
+aside .menu-toggle-wrap .menu-toggle:hover  {
+	background-color: var(--primaryHover);
 }
 aside h3,
 aside .ancla-link .text,
 aside .logo .text{
 	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
+	transition: opacity all 0.3s ease-in-out;
 }
 
 aside h3 {
@@ -180,23 +188,23 @@ aside h3 {
 	text-transform: uppercase;
 }
 aside .menu {
-	margin: 0 -2rem;
-	padding: 0 1.5rem;
+	margin: 0 -1rem;
+	padding: 0 1rem;
 }
 aside .menu .ancla-link {
-	font-size: 20px;
+	font-size: 16px;
 	color: var(--grey);
 	display: flex;
 	align-items: center;
 	text-decoration: none;
-	transition: 0.2s ease-in-out;
-	padding: 0.5rem 1rem;
+	transition: all 0.2s ease-in-out;
+	padding: 0.5rem 0.7rem;
 	border-radius: 5px;
 	margin: 5px 0px;
 }
 
 aside .menu .link-collapse{
-	margin-left: 15%;
+	margin-left: 0%;
 }
 aside .menu div button{
 	color: var(--grey);
@@ -207,16 +215,16 @@ aside .menu div button{
 	background: transparent;
 }
 aside .menu div button a{
-	margin-left: 5% !important;
+	margin-left: 1% !important;
 }
 aside .menu .ancla-linkn .bx {
 	font-size: 2rem;
 	color: var(--grey);
-	transition: 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 aside .menu .ancla-link .text {
 	color: var(--grey);
-	transition: 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 aside .menu .ancla-link:hover {
 	background-color: rgba(138, 146, 166, 0.3);
@@ -232,7 +240,7 @@ aside .menu .ancla-link.router-link-exact-active .bx, aside .menu .ancla-link.ro
 }
 aside .footer {
 	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
+	transition: opacity all 0.3s ease-in-out;
 }
 aside .footer p {
 	font-size: 0.875rem;
@@ -241,10 +249,13 @@ aside .footer p {
 aside.is-expanded {
 	width: var(--sidebar-width);
 }
+
 aside.is-expanded .menu-toggle-wrap {
-	top: -3rem;
+	top: 0rem;
 }
+
 aside.is-expanded .menu-toggle-wrap .menu-toggle {
+	top: -3rem;
 	transform: rotate(-180deg);
 }
 aside.is-expanded h3, aside.is-expanded .ancla-link .text,
