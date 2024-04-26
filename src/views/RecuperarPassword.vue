@@ -1,7 +1,7 @@
 <script setup>
-import LogoURL from '../assets/Logo-Dashboard.png'
-import BgRecuperar from '../assets/bg-olvido-pass.jpg'
-import Avatar from '../assets/avatar-olvido.png'
+import LogoURL from '../assets/img/Logo-Dashboard.png'
+import BgRecuperar from '../assets/img/bg-olvido-pass.jpg'
+import Avatar from '../assets/img/avatar-olvido.png'
 </script>
 
 <template>
@@ -75,6 +75,9 @@ import Avatar from '../assets/avatar-olvido.png'
 </template>
 
 <style scoped>
+.card-header, .card-footer{
+	background-color: #fff;
+}
 .form-login{
 	position: relative;
 	width: 600px;
@@ -83,7 +86,7 @@ import Avatar from '../assets/avatar-olvido.png'
 }
 .input-login {
 	border: 1px solid var(--primary) !important;
-	padding: 8px 16px;
+	padding: 8px 16px !important;
 	border-radius: 5px !important;
 }
 
@@ -91,7 +94,7 @@ import Avatar from '../assets/avatar-olvido.png'
 	width: 100%;
 	height: 100vh !important;
 	padding: 0px;
-    background-image: url(../assets/bg-olvido-pass.jpg);
+    background-image: url(../assets/img/bg-olvido-pass.jpg);
     background-size: cover;
 }
 .btn-form-submit{

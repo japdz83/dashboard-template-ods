@@ -1,0 +1,101 @@
+header {
+	position: relative;
+	top: 0;
+	right: 0;
+	width: 100% !important;
+	height: 70px;
+	background-color: #fff;
+	right: 0;
+	top: 0;
+}
+header nav .content-nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.nav {
+	background-color: #fff;
+}
+
+.nav .search-input .input-group .form-control {
+	border-left: 0;
+	box-shadow: 12px 0px 15px -5px rgba(0, 0, 0, 0.1);
+}
+.nav .search-input .input-group .form-control:focus {
+	box-shadow: unset;
+	border: 1px solid var(--primary);
+}
+.nav .search-input .input-group .form-control:focus-within,
+.nav .search-input .input-group .input-group-text:focus-within {
+	border-color: var(--primary);
+}
+header nav .content-nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.form-control {
+	border: none !important;
+	padding: 0 !important;
+}
+.form-control:focus {
+	color: none !important;
+	background-color: none !important;
+	border-color: none !important;
+	outline: 0;
+	box-shadow: none !important;
+}
+.form-nav {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: space-around;
+	border: 0.1rem solid rgba(138, 146, 166, 0.5);
+	border-radius: 5px;
+	padding: 0.5rem;
+	transition: all 0.4s ease-in;
+}
+.form-nav:hover,
+.form-nav:focus {
+	border: 1.5px solid var(--primary) !important;
+}
+.bx-nav {
+	font-size: 1.5rem;
+	color: var(--grey);
+	margin-right: 0.5rem;
+}
+header nav .navbar-inner .content-nav form input {
+	border: none !important;
+}
+header nav .navbar-inner .content-nav form input:focus {
+	border: var(--primary);
+}
+.search-nav {
+	border: none;
+	padding: 4px;
+}
+.search-nav:focus {
+	border: 1px solid var(--primary);
+}
+.dropdown-toggle {
+	background-color: transparent;
+	border: none;
+}
+
+.dropdown-toggle span h6 {
+	margin: 0;
+	font-weight: bold;
+}
+.user-access {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	justify-content: space-between;
+}
+
+.user-access ul li a {
+	font-size: 1rem;
+	color: var(--grey) !important;
+}

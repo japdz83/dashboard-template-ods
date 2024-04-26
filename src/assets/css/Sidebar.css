@@ -1,0 +1,152 @@
+aside {
+	display: flex;
+	position: relative;
+	top: 0;
+	left: 0;
+	flex-direction: column;
+	background-color: var(--white);
+	color: var(--grey);
+	width: 78px;
+	min-height: 100vh;
+	padding: 10px 14px;
+	box-shadow: 12px 0px 15px -5px rgba(0, 0, 0, 0.1);
+	transition: all 0.5s ease-in-out;
+	z-index: 1;
+}
+aside .flex {
+	flex: 110%;
+}
+
+aside .header {
+	margin-bottom: 2rem;
+}
+aside .header .logo {
+	align-items: center;
+}
+aside .header .logo img {
+	width: 2rem;
+}
+aside .header .logo span {
+	padding: 0rem 1rem;
+	padding-bottom: 2rem;
+	color: var(--primary-alt);
+}
+aside .header .toggle {
+	position: absolute;
+	top: 4%;
+	right: -12px;
+	transform: translateY(-50%) rotate(180deg);
+	width: 30px;
+	height: 30px;
+	background-color: var(--primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 25px;
+	transition: all 0.4s ease;
+	cursor: pointer;
+}
+aside .header .toggle:hover {
+	background-color: var(--primaryHover);
+}
+aside h3,
+aside .ancla-link .text,
+aside .ancla-link .bx-drop,
+aside .logo .text {
+	opacity: 0;
+	transition: opacity all 0.4s ease-in-out;
+}
+aside h3 {
+	color: var(--grey);
+	font-size: 0.875rem;
+	margin-bottom: 0.5rem;
+	text-transform: uppercase;
+}
+aside .menu {
+	margin: 0 -1rem;
+	padding: 0 1rem;
+}
+aside .menu .ancla-link {
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	color: var(--grey);
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	transition: all 0.4s ease-in-out;
+	padding: 0.6rem 1rem;
+	border-radius: 5px;
+	margin: 5px 0px;
+}
+aside .menu .link-collapse {
+	margin-left: 0%;
+}
+aside .menu div button {
+	color: var(--grey);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: none;
+	background: transparent;
+}
+aside .menu div button a {
+	margin-left: 1% !important;
+}
+aside .menu .ancla-linkn .bx-drop {
+	font-size: 2rem;
+	color: var(--grey);
+	transition: all 0.4s ease-in-out;
+}
+aside .menu .ancla-link .text {
+	color: var(--grey);
+	transition: all 0.4s ease-in-out;
+}
+aside .menu .ancla-link:hover {
+	background-color: rgba(138, 146, 166, 0.3);
+}
+aside .menu .ancla-link:hover .bx-drop,
+aside .menu .ancla-link:hover .text {
+	color: var(--primary);
+}
+aside .menu .ancla-link.router-link-exact-active {
+	background-color: var(--primary);
+}
+aside .menu .ancla-link.router-link-exact-active .bx-drop,
+aside .menu .ancla-link.router-link-exact-active .text {
+	color: var(--white);
+}
+aside .footer {
+	opacity: 0;
+	transition: opacity all 0.4s ease-in-out;
+}
+aside .footer p {
+	font-size: 0.875rem;
+	color: var(--grey);
+}
+aside.is-expanded {
+	width: 250px;
+}
+aside.is-expanded .toggle {
+	transform: translateY(-50%);
+}
+aside.is-expanded h3,
+aside.is-expanded .ancla-link .text,
+aside .ancla-link .bx-drop,
+aside.is-expanded .logo .text {
+	opacity: 1;
+}
+aside.is-expanded .ancla-link .bx-drop {
+	margin-right: 1rem;
+}
+aside.is-expanded .footer {
+	opacity: 0;
+}
+@media (max-width: 1024px) {
+	aside {
+		position: absolute;
+		z-index: 99;
+	}
+}

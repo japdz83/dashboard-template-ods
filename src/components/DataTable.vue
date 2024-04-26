@@ -180,6 +180,9 @@ import InputSearch from './InputSearch.vue'
 								<button
 									type="button"
 									class=" btn btn-tablet-edit "
+									data-bs-toggle="modal"
+									data-bs-target="#exampleModal"
+									data-bs-whatever="@mdo"
 								>
 									<i class="bx bx-edit-alt"></i>
 								</button>
@@ -258,6 +261,9 @@ import InputSearch from './InputSearch.vue'
 								<button
 									type="button"
 									class=" btn btn-tablet-edit "
+									data-bs-toggle="modal"
+									data-bs-target="#exampleModal"
+									data-bs-whatever="@mdo"
 								>
 									<i class="bx bx-edit-alt"></i>
 								</button>
@@ -336,6 +342,9 @@ import InputSearch from './InputSearch.vue'
 								<button
 									type="button"
 									class=" btn btn-tablet-edit "
+									data-bs-toggle="modal"
+									data-bs-target="#exampleModal"
+									data-bs-whatever="@mdo"
 								>
 									<i class="bx bx-edit-alt"></i>
 								</button>
@@ -414,6 +423,9 @@ import InputSearch from './InputSearch.vue'
 								<button
 									type="button"
 									class=" btn btn-tablet-edit "
+									data-bs-toggle="modal"
+									data-bs-target="#exampleModal"
+									data-bs-whatever="@mdo"
 								>
 									<i class="bx bx-edit-alt"></i>
 								</button>
@@ -492,6 +504,9 @@ import InputSearch from './InputSearch.vue'
 								<button
 									type="button"
 									class=" btn btn-tablet-edit "
+									data-bs-toggle="modal"
+									data-bs-target="#exampleModal"
+									data-bs-whatever="@mdo"
 								>
 									<i class="bx bx-edit-alt"></i>
 								</button>
@@ -505,6 +520,62 @@ import InputSearch from './InputSearch.vue'
 						</tr>
 					</tbody>
 				</table>
+			</div>
+		</div>
+		<div class="card-footer text-body-secondary py-3">
+			<div
+				class="item-mostrar d-flex align-items-center justify-content-between"
+			>
+				<div class="d-flex align-items-center justify-content-around">
+					<div
+						class="mostrando d-flex align-items-center justify-content-around mx-2"
+					>
+						<span class="text mx-2">Mostrar</span>
+						<div class="dropdown drop-pagina">
+							<a
+								class="btn btn-secondary dropdown-toggle"
+								href="#"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								10
+							</a>
+
+							<ul class="dropdown-menu">
+								<li>
+									<a class="dropdown-item" href="#">1</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#">2</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#"> 3 </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="num-registros d-flex align-items-center justify-content-around"
+					>
+						<span class="mx-2">Mostrando</span>
+						<span class="mx-2 num-registro-item">5</span>
+						<span class="mx-2">Registros</span>
+					</div>
+				</div>
+				<div
+					class="paginacion-table d-flex align-items-center justify-content-around"
+				>
+					<span> 1 - 10 de 500 </span>
+					<span>
+						<a href="#" class="prev-paginacion">
+							<i class="bx bx-chevron-left "></i>
+						</a>
+						<a href="#" class="next-paginacion">
+							<i class="bx bx-chevron-right "></i>
+						</a>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -576,5 +647,30 @@ import InputSearch from './InputSearch.vue'
 .form-check{
 	display: flex;
 	gap: 5px
+}
+.mostrando .text{
+	font-weight: 600;
+}
+.drop-pagina .dropdown-toggle{
+	width: 70px;
+	height: 40px;
+	border: 1px solid #7A8789;
+	border-radius: 35px !important;
+	background-color: #fff;
+	color: #7A8789;
+}
+.num-registro-item{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 40px;
+	border: 1px solid #7A8789;
+	border-radius: 5px;
+}
+.prev-paginacion,
+.next-paginacion{
+	color: var(--grey);
+	font-size: 25px;
 }
 </style>

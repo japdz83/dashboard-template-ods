@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
+/* ===== CSS Components ===== */
+@import url("./Sidebar.css");
+@import url("./Navbar.css");
+@import url("./StatisticsCard.css");
+@import url("./BannerIntro.css");
+/* ===== *** ===== */
+
 :root {
 	--primary: #3a57e8;
 	--primaryHover: #233fca;
@@ -40,8 +47,14 @@ li {
 .wrapper {
 	display: flex;
 }
-
 .main {
+	position: relative;
+	top: 0;
+	right: 0;
+	width: 100%;
+}
+
+/* .main {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -49,5 +62,16 @@ li {
 	overflow: hidden;
 	transition: all 0.35s ease-in-out;
 	background-color: var(--light-bg);
-	min-width: 0;
 }
+.main {
+	position: relative;
+	left: 0px;
+	height: 100vh;
+	width: calc(100% - 250px);
+	transition: var(--tran-05);
+}
+
+aside.is-expanded ~ .main {
+	left: 0px;
+	width: calc(100% - 88px);
+} */

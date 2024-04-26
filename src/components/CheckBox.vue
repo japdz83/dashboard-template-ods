@@ -11,5 +11,3 @@
 		<label class="form-check-label" for="flexCheckDefault"> 001 </label>
 	</div>
 </template>
-
-<style scoped></style>

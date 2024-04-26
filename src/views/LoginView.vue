@@ -1,10 +1,10 @@
 <script setup>
-import LogoURL from '../assets/Logo-Dashboard.png'
-import BgLogin from '../assets/login-img.png'
-import Gmail from '../assets/Gmail.png'
-import Facebook from '../assets/Facebook.png'
-import Instagram from '../assets/Instagram.png'
-import Linkedin from '../assets/Linkedin.png'
+import LogoURL from '../assets/img/Logo-Dashboard.png'
+import BgLogin from '../assets/img/login-img.png'
+import Gmail from '../assets/img/Gmail.png'
+import Facebook from '../assets/img/Facebook.png'
+import Instagram from '../assets/img/Instagram.png'
+import Linkedin from '../assets/img/Linkedin.png'
 </script>
 
 <template>
@@ -12,7 +12,7 @@ import Linkedin from '../assets/Linkedin.png'
 		<div class="col col-6">
 			<div class="form-login mx-auto d-flex flex-column mx-lg-0">
 				<div class="card card-plain border-0 p-4 bg-white w-100">
-					<div class="card-header  pb-0 border-0 mb-3">
+					<div class="card-header pb-0 border-0 mb-3">
 						<div
 							class="login-logo text-start d-flex mb-5 align-items-center"
 						>
@@ -127,7 +127,9 @@ import Linkedin from '../assets/Linkedin.png'
 </template>
 
 <style scoped>
-
+.card-header, .card-footer{
+	background-color: #fff;
+}
 .form-login{
 	position: relative;
 	left: 20%;
@@ -135,17 +137,21 @@ import Linkedin from '../assets/Linkedin.png'
 	padding: 2rem;
 	margin: 0px auto;
 }
+.form-login .card .card-body input{
+}
 .input-login {
 	border: 1px solid var(--primary) !important;
-	padding: 8px 16px;
+	padding: 8px 16px !important;
 	border-radius: 5px !important;
+	display: flex;
+	align-items: center;
 }
 
 .img-login{
 	width: 100%;
 	height: 100vh !important;
 	padding: 0px;
-    background-image: url(../assets/login-img.png);
+    background-image: url(../assets/img/login-img.png);
     background-size: cover;
 
 }

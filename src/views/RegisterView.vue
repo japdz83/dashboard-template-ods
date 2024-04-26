@@ -1,10 +1,10 @@
 <script setup>
-import LogoURL from '../assets/Logo-Dashboard.png'
-import BgRegistro from '../assets/registro-img.jpg'
-import Gmail from '../assets/Gmail.png'
-import Facebook from '../assets/Facebook.png'
-import Instagram from '../assets/Instagram.png'
-import Linkedin from '../assets/Linkedin.png'
+import LogoURL from '../assets/img/Logo-Dashboard.png'
+import BgRegistro from '../assets/img/registro-img.jpg'
+import Gmail from '../assets/img/Gmail.png'
+import Facebook from '../assets/img/Facebook.png'
+import Instagram from '../assets/img/Instagram.png'
+import Linkedin from '../assets/img/Linkedin.png'
 </script>
 
 <template>
@@ -208,6 +208,10 @@ import Linkedin from '../assets/Linkedin.png'
 
 <style scoped>
 
+.card-header, .card-footer{
+	background-color: #fff;
+}
+
 .form-login{
 	position: relative;
 	left: 5%;
@@ -217,7 +221,7 @@ import Linkedin from '../assets/Linkedin.png'
 }
 .input-login {
 	border: 1px solid var(--primary) !important;
-	padding: 8px 16px;
+	padding: 8px 16px !important;
 	border-radius: 5px !important;
 }
 
@@ -225,7 +229,7 @@ import Linkedin from '../assets/Linkedin.png'
     width: 100%;
 	height: 100vh !important;
 	padding: 0px !important;
-    background-image: url(../assets/registro-img.jpg);
+    background-image: url(../assets/img/registro-img.jpg);
     background-size: cover;
 }
 .btn-form-submit{

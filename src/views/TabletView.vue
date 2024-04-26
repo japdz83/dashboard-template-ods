@@ -1,9 +1,9 @@
 <script setup>
 import Tablet from '../components/DataTable.vue'
 import ModalForm from '../components/ModalForm.vue'
-import Impresora from '../assets/btn-reportes/impresora-1.png'
-import Excel from '../assets/btn-reportes/excel-1.png'
-import PDF from '../assets/btn-reportes/pdf-1.png'
+import Impresora from '../assets/img/btn-reportes/impresora-1.png'
+import Excel from '../assets/img/btn-reportes/excel-1.png'
+import PDF from '../assets/img/btn-reportes/pdf-1.png'
 </script>
 
 <template>
@@ -14,13 +14,13 @@ import PDF from '../assets/btn-reportes/pdf-1.png'
 			>
 				<div class="box_reporte d-flex gap-2 ">
 					<button class="buton_reporte">
-						<img :src="Impresora" alt="" />
+						<img :src="Impresora" alt="Icon Impresora" />
 					</button>
 					<button class="buton_reporte">
-						<img :src="Excel" alt="" />
+						<img :src="Excel" alt="Icon Excel" />
 					</button>
 					<button class="buton_reporte">
-						<img :src="PDF" alt="" />
+						<img :src="PDF" alt="Icon PDF" />
 					</button>
 				</div>
 				<div class="box_btn-crear">

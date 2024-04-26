@@ -27,9 +27,3 @@ import "vue3-circle-progress/dist/circle-progress.css"
 		</div>
 	</div>
 </template>
-
-<style scoped>
-.card{
-    box-shadow: 15px 10px 12px -7px rgba(0,0,0,0.2);
-}
-</style>

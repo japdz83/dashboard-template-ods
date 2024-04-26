@@ -127,6 +127,10 @@
     padding: 5px 3rem;
     border-radius: 4px;
 }
+.form-control{
+	border: 1px solid var(--grey) !important;
+	padding: 6px !important;
+}
 .btn-form{
     background-color: var(--buttonColor);
     color: var(--white);
