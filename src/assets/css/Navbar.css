@@ -5,8 +5,8 @@ header {
 	width: 100% !important;
 	height: 70px;
 	background-color: #fff;
-	right: 0;
-	top: 0;
+	z-index: 1;
+	padding: 0px 10px;
 }
 header nav .content-nav {
 	width: 100%;
@@ -14,8 +14,14 @@ header nav .content-nav {
 	justify-content: space-around;
 	align-items: center;
 }
-.nav {
-	background-color: #fff;
+
+.nav .form-nav {
+	padding-left: 1rem !important;
+	margin-left: 10px !important;
+}
+.nav .form-nav .icon {
+	margin-right: 10px !important;
+	padding-right: 10px !important;
 }
 
 .nav .search-input .input-group .form-control {

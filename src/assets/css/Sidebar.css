@@ -1,41 +1,45 @@
 aside {
-	display: flex;
-	position: relative;
+	position: fixed;
 	top: 0;
 	left: 0;
-	flex-direction: column;
-	background-color: var(--white);
-	color: var(--grey);
-	width: 78px;
-	min-height: 100vh;
+	height: 100vh !important;
+	width: 240px;
 	padding: 10px 14px;
-	box-shadow: 12px 0px 15px -5px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
 	transition: all 0.5s ease-in-out;
-	z-index: 1;
-}
-aside .flex {
-	flex: 110%;
+	z-index: 2;
 }
 
 aside .header {
-	margin-bottom: 2rem;
+	position: relative;
+	margin-bottom: 1.5rem;
 }
-aside .header .logo {
+aside .aside-logo img {
+	width: 35px;
+}
+aside .header .aside-logo {
+	display: flex;
 	align-items: center;
 }
-aside .header .logo img {
-	width: 2rem;
+.header .aside-logo .header-text {
+	display: flex;
+	flex-direction: column;
 }
-aside .header .logo span {
+.header-text .name {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+aside .header .aside-logo span {
 	padding: 0rem 1rem;
-	padding-bottom: 2rem;
 	color: var(--primary-alt);
 }
 aside .header .toggle {
 	position: absolute;
-	top: 4%;
-	right: -12px;
-	transform: translateY(-50%) rotate(180deg);
+	top: 30%;
+	right: -25px;
+	transform: translateY(-30%);
 	width: 30px;
 	height: 30px;
 	background-color: var(--primary);
@@ -51,11 +55,24 @@ aside .header .toggle {
 aside .header .toggle:hover {
 	background-color: var(--primaryHover);
 }
+aside .menu-bar .menu ul {
+	padding-left: 10px !important;
+}
+
+aside li .ancla-link {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	border-radius: 6px;
+	transition: all 0.4s ease;
+}
+
 aside h3,
 aside .ancla-link .text,
-aside .ancla-link .bx-drop,
-aside .logo .text {
-	opacity: 0;
+aside .ancla-link .icon,
+aside .aside-logo .text {
+	opacity: 1;
 	transition: opacity all 0.4s ease-in-out;
 }
 aside h3 {
@@ -63,6 +80,13 @@ aside h3 {
 	font-size: 0.875rem;
 	margin-bottom: 0.5rem;
 	text-transform: uppercase;
+}
+
+aside .menu-bar {
+	height: calc(100% - 50px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 aside .menu {
 	margin: 0 -1rem;
@@ -92,10 +116,14 @@ aside .menu div button {
 	border: none;
 	background: transparent;
 }
-aside .menu div button a {
-	margin-left: 1% !important;
+aside .menu-bar .menu .menu-links .nav-link .collapse-aside {
+	padding-left: 30px !important;
 }
-aside .menu .ancla-linkn .bx-drop {
+aside.is-expanded .menu-bar .menu .menu-links .nav-link .collapse-aside {
+	padding-left: 0px !important;
+}
+
+aside .menu .ancla-linkn .icon {
 	font-size: 2rem;
 	color: var(--grey);
 	transition: all 0.4s ease-in-out;
@@ -107,38 +135,30 @@ aside .menu .ancla-link .text {
 aside .menu .ancla-link:hover {
 	background-color: rgba(138, 146, 166, 0.3);
 }
-aside .menu .ancla-link:hover .bx-drop,
+aside .menu .ancla-link:hover .icon,
 aside .menu .ancla-link:hover .text {
 	color: var(--primary);
 }
 aside .menu .ancla-link.router-link-exact-active {
 	background-color: var(--primary);
 }
-aside .menu .ancla-link.router-link-exact-active .bx-drop,
+aside .menu .ancla-link.router-link-exact-active .icon,
 aside .menu .ancla-link.router-link-exact-active .text {
 	color: var(--white);
 }
-aside .footer {
-	opacity: 0;
-	transition: opacity all 0.4s ease-in-out;
-}
-aside .footer p {
-	font-size: 0.875rem;
-	color: var(--grey);
-}
+
 aside.is-expanded {
-	width: 250px;
+	width: 88px;
 }
 aside.is-expanded .toggle {
-	transform: translateY(-50%);
+	transform: translateY(-30%) rotate(180deg);
 }
 aside.is-expanded h3,
 aside.is-expanded .ancla-link .text,
-aside .ancla-link .bx-drop,
-aside.is-expanded .logo .text {
-	opacity: 1;
+aside.is-expanded .aside-logo .text {
+	opacity: 0;
 }
-aside.is-expanded .ancla-link .bx-drop {
+aside.is-expanded .ancla-link .icon {
 	margin-right: 1rem;
 }
 aside.is-expanded .footer {

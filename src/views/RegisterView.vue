@@ -207,6 +207,10 @@ import Linkedin from '../assets/img/Linkedin.png'
 </template>
 
 <style scoped>
+.card{
+	box-shadow: 3px 5px 5px 1px rgba(0, 0, 0, 0.1);
+	padding: 0px 10px;
+}
 
 .card-header, .card-footer{
 	background-color: #fff;

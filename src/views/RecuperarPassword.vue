@@ -75,6 +75,9 @@ import Avatar from '../assets/img/avatar-olvido.png'
 </template>
 
 <style scoped>
+.card{
+	box-shadow: 3px 5px 5px 1px rgba(0, 0, 0, 0.1);
+}
 .card-header, .card-footer{
 	background-color: #fff;
 }

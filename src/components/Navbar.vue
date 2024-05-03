@@ -1,15 +1,17 @@
 <script setup>
 import flag from '../assets/img/Flag/flag-Ing.png'
 import avatar from '../assets/img/avatar-1.png'
+
+defineEmits(['toggle-sidebar'])
 </script>
 
 <template>
-	<header class="px-2 border-bottom-1 shadow">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<header class="border-bottom-1 shadow">
+		<nav class="navbar navbar-expand-lg ">
 			<div class="container-fluid">
 				<div class="d-flex align-items-center">
-					<form class="d-flex ms-auto form-nav">
-						<i class="bx bx-search"></i>
+					<form class="d-flex ms-auto form-nav mx-2 px-2">
+						<i class="bx bx-search px-2 icon"></i>
 						<input
 							class="form-control me-2 search-nav"
 							type="search"
@@ -94,3 +96,5 @@ import avatar from '../assets/img/avatar-1.png'
 		</nav>
 	</header>
 </template>
+
+<style></style>

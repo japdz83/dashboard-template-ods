@@ -1,5 +1,5 @@
 <script setup>
-import BannerIntro from '../components/BannerIntro.vue'
+import BannerIntro from '@/components/BannerIntro.vue';
 import StatisticsCard from '../components/Cards/StatisticsCard.vue'
 </script>
 
@@ -7,9 +7,9 @@ import StatisticsCard from '../components/Cards/StatisticsCard.vue'
 	<BannerIntro />
 	<div class="content px-3 py-4">
 		<div class="container-fluid">
-			<div class="mb-3">
-				<div class="flotar">
-					<div class="row">
+			<div class="mb-3 d-flex justify-content-center w-auto">
+				<div class="flotar w-100 d-flex justify-content-center">
+					<div class="row justify-content-between ">
 						<div class="col-lg-2 col-md-6 col-12">
 							<StatisticsCard />
 						</div>
@@ -46,8 +46,8 @@ import StatisticsCard from '../components/Cards/StatisticsCard.vue'
 }
 
 .flotar{
-	width: 100%;
 	position: absolute;
+
 	top: -4rem;
 	padding: 0 4rem 0 0;
 }

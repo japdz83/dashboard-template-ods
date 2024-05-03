@@ -30,48 +30,35 @@
 }
 
 body {
-	background: var(--light);
+	background: var(--light-bg);
 	font-family: "Poppins", sans-serif;
 	color: var(--grey);
 	font-size: 16px;
 }
 
 a {
-	text-decoration: none;
+	text-decoration: none !important;
 }
 
 li {
-	list-style: none;
+	list-style: none !important;
 }
 
 .wrapper {
+	position: relative;
+	height: auto;
+	width: 100%;
 	display: flex;
+	align-items: center;
 }
 .main {
 	position: relative;
-	top: 0;
-	right: 0;
-	width: 100%;
+	width: calc(100% - 240px);
+	left: 240px;
+	height: auto !important;
+	transition: all 0.5s ease;
 }
-
-/* .main {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	width: 100%;
-	overflow: hidden;
-	transition: all 0.35s ease-in-out;
-	background-color: var(--light-bg);
-}
-.main {
-	position: relative;
-	left: 0px;
-	height: 100vh;
-	width: calc(100% - 250px);
-	transition: var(--tran-05);
-}
-
 aside.is-expanded ~ .main {
-	left: 0px;
 	width: calc(100% - 88px);
-} */
+	left: 88px;
+}
